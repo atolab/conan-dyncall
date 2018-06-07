@@ -2,7 +2,7 @@
 
 | Bintray | Windows | Linux & macOS |
 |:--------:|:---------:|:-----------------:|
-|BINTRAY_BADGE_URL|APPVEYOR_BADGE_URL|TRAVIS_BADGE_URL|
+|[ ![Download](https://api.bintray.com/packages/k0ekk0ek/public-conan/dyncall%3Ak0ekk0ek/images/download.svg?version=1.0%3Astable) ](https://bintray.com/k0ekk0ek/public-conan/dyncall%3Ak0ekk0ek/1.0%3Astable/link)|[![Build status](https://ci.appveyor.com/api/projects/status/frqbt2sqwksg1qy6/branch/stable/1.0?svg=true)](https://ci.appveyor.com/project/k0ekk0ek/conan-dyncall/branch/stable/1.0)|[![Build Status](https://travis-ci.org/k0ekk0ek/conan-dyncall.svg?branch=stable%2F1.0)](https://travis-ci.org/k0ekk0ek/conan-dyncall)|
 
 ## Conan.io Information
 
@@ -36,10 +36,10 @@ The contents of this GIT repository are completely separate from the software be
 
 ### License(s) for packaged software:
 
-    ~/.conan/data/<pkg_name>/<pkg_version>/bincrafters/package/<random_package_id>/license/<LICENSE_FILES_HERE>
+    ~/.conan/data/dyncall/<pkg_version>/bincrafters/package/<random_package_id>/license/<LICENSE_FILES_HERE>
 
 *Note :   The most common filenames for OSS licenses are `LICENSE` AND `COPYING` without file extensions.*
 
 ### License for Bincrafters recipe:
 
-    ~/.conan/data/<pkg_name>/<pkg_version>/bincrafters/export/LICENSE.md
+    ~/.conan/data/dyncall/<pkg_version>/bincrafters/export/LICENSE.md
