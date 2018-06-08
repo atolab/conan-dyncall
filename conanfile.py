@@ -50,4 +50,7 @@ class DynCallConan(ConanFile):
 
     def package_info(self):
         self.cpp_info.libs = tools.collect_libs(self)
+        if self.settings.os == 'Windows' and self.settings.arch == 'x86':
+            self.cpp_info.exelinkflags.append('/SAFESEH:NO')
+            self.cpp_info.sharedlinkflags.append('/SAFESEH:NO')
 
