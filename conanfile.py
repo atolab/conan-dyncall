@@ -7,8 +7,8 @@ import os
 
 
 class DynCallConan(ConanFile):
-    name = "dyncall"
-    version = "1.0"
+    name = 'dyncall'
+    version = '09132016'
     description = "A Generic Dynamic FFI package"
     url = "https://github.com/k0ekk0ek/conan-dyncall"
     homepage = "http://www.dyncall.org"
@@ -23,14 +23,19 @@ class DynCallConan(ConanFile):
     source_subfolder = "source_subfolder"
     build_subfolder = "build_subfolder"
 
+    repository = 'https://github.com/Snaipe/dyncall.git'
+    branch = 'master'
+    commit = '51e79a84fd91881d7424b28271c6dda4e0d97c11'
+
     def config_options(self):
         if self.settings.os == 'Windows':
             del self.options.fPIC
 
     def source(self):
-        tools.get("{0}/r{2}/{1}-{2}.tar.gz".format(self.homepage, self.name, self.version))
-        extracted_dir = self.name + "-" + self.version
-        os.rename(extracted_dir, self.source_subfolder)
+        self.run('git clone --branch={0} {1} {2}'
+            .format(self.branch, self.repository, self.source_subfolder))
+        self.run('git -C {0} checkout {1}'
+            .format(self.source_subfolder, self.commit))
 
     def configure_cmake(self):
         cmake = CMake(self)
