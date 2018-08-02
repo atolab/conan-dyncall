@@ -9,7 +9,7 @@ class DynCallConan(ConanFile):
     name = 'dyncall'
     version = '09132016'
     description = "A Generic Dynamic FFI package"
-    url = "https://github.com/k0ekk0ek/conan-dyncall"
+    url = "https://github.com/atolab/conan-dyncall"
     homepage = "http://www.dyncall.org"
     # DynCall uses a custom license, modeled after the ISC license.
     license = "dyncall"
